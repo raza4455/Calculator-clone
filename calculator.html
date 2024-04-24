@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculater</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getNum(num) {
+        let result = document.getElementById("result");
+        result.value += num;
+			
+		}
+		function clearResult(){
+			let result = document.getElementById("result");
+			result.value = ""
+
+		}
+		function getResult(){
+			let result = document.getElementById("result");
+			result.value = eval(result.value)
+		}
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div>
+			<input class="result" id = "result" type="text">
+		</div>
+		<div>
+			<button class="row" onclick="getNum('1')">1</button>
+			<button class="row" onclick="getNum('2')">2</button>
+			<button class="row" onclick="getNum('3')">3</button>
+			<button class="row1" onclick="getNum('+')">+</button>
+			<button class="row1" onclick="getNum('*')">*</button>
+		</div>
+			<div>
+			<button class="row" onclick="getNum('4')">4</button>
+			<button class="row" onclick="getNum('5')">5</button>
+			<button class="row" onclick="getNum('6')">6</button>
+			<button class="row1" onclick="getNum('-')">-</button>
+			<button class="row1" onclick="getNum('.')">.</button>
+		</div>
+			<div>
+			<button class="row" onclick="getNum('7')">7</button>
+			<button class="row" onclick="getNum('8')">8</button>
+			<button class="row" onclick="getNum('9')">9</button>
+			<button class="row1" onclick="getNum('/')">/</button>
+			<button class="row1" onclick="getNum('$')">$</button>
+		</div>
+			<div>
+			<button class="row2" onclick="clearResult('C')">C</button>
+			<button class="row" onclick="getNum('0')">0</button>
+			<button class="row3" onclick="getResult('=')">=</button>
+			<button class="row1" onclick="getNum('%')">%</button>
+			<button class="row1" onclick="clearResult('ers')">ers</button>
+		</div>
+	</div>
+
+</body>
+</html>
